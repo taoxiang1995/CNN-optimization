@@ -1,0 +1,39 @@
+QUESTION 1:
+
+
+LAYER 0 (conv)     : <4002.630> ms / <42.235> %
+LAYER 1 (relu)     : <66.710> ms / <0.704> %
+LAYER 2 (pool)     : <133.421> ms / <1.408> %
+LAYER 3 (conv)     : <4059.810> ms / <42.838> %
+LAYER 4 (relu)     : <19.060> ms / <0.201> %
+LAYER 5 (pool)     : <66.710> ms / <0.704> %
+LAYER 6 (conv)     : <1086.428> ms / <11.464> %
+LAYER 7 (relu)     : <9.418> ms / <0.099> %
+LAYER 8 (pool)     : <14.127> ms / <0.149> %
+LAYER 9 (fc)       : <11.772> ms / <0.124> %
+LAYER 10 (softmax) : <7.063> ms / <0.075> %
+------------------------------------------
+Total : <9477.149> ms     <100> %
+
+QUESTION 2:
+
+conv: <9148.868> ms <96.536> %
+relu: <95.151> ms <1.004> %
+pool: <214.278> ms <2.261> %
+fc: <11.772> ms <0.124> %
+softmax: <7.063> ms <0.075> %
+
+largest fraction: <conv|relu|pool|fc|softmax> conv
+smallest fraction: <conv|relu|pool|fc|softmax> softmax
+
+QUESTION 3:
+
+conv: <speedup> x3.7
+relu: <speedup> x1.006
+pool: <speedup> x1.0167
+fc: <speedup> x1.00075
+softmax: <speedup> x1.00075
+
+Which layer should we optimize?
+
+<conv layer>
